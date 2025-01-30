@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Scanner</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>QR Code Scanner</h1>
+        <p>Point your camera at a QR code to scan it.</p>
+    </header>
+
+    <main>
+        <div id="camera-view">
+            <video id="camera" autoplay playsinline></video>
+        </div>
+
+        <div id="result">
+            <p>Scanned QR Code:</p>
+            <p id="qr-result" class="qr-result">None</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Made with ❤️ using Intellij Ultimate</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
+
+<script src="scripts/main.js"></script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(registration => console.log('ServiceWorker registered'))
+            .catch(err => console.log('ServiceWorker registration failed: ', err));
+    }
+</script>
+</body>
+</html>
