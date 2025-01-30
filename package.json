@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -13,5 +16,13 @@
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11",
     "web-push": "^3.6.7"
-  }
+  },
+  "description": "PWA example app for Web2.",
+  "main": "service-worker.js",
+  "devDependencies": {
+    "vite": "^6.0.11"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
