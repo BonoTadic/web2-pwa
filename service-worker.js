@@ -2,8 +2,8 @@ const CACHE_NAME = 'qr-scanner-v1';
 const ASSETS = [
     '/',
     '/index.html',
-    '/styles/main.css',
-    '/scripts/main.js',
+    '/src/styles/main.css',
+    '/src/scripts/main.js',
     '/manifest.json',
     '/icons/icon-192x192.png',
     '/icons/icon-512x512.png',

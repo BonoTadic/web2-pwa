@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "serve": "vite",
+    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview --port 5000",
+    "preview:https": "local-ssl-proxy --source 3001 --target 5000"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -20,6 +20,7 @@
   "description": "PWA example app for Web2.",
   "main": "service-worker.js",
   "devDependencies": {
+    "local-ssl-proxy": "^2.0.5",
     "vite": "^6.0.11"
   },
   "keywords": [],
